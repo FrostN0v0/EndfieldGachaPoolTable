@@ -3,81 +3,81 @@
   "data": {
     "pool": {
       "pool_gacha_type": "weapon",
-      "pool_name": "远途申领",
+      "pool_name": "新芽申领",
       "link_char_pool_name": "",
-      "up6_name": "不知归",
-      "up6_image": "https://web.hycdn.cn/upload/image/20260109/a6c9860df8009e7e5f93daca39b3edaf.png",
-      "gift_weapon_name": "不知归",
-      "gift_weapon_box_name": "补充武库箱·远途",
-      "gift_weapon_reward_name": "远途赠礼",
+      "up6_name": "落草",
+      "up6_image": "https://web.hycdn.cn/upload/image/20260312/07bcf8220af199599326cc8c22edc6e2.png",
+      "gift_weapon_name": "落草",
+      "gift_weapon_box_name": "补充武库箱·新芽",
+      "gift_weapon_reward_name": "新芽赠礼",
       "gift_content": [
         {
-          "type": 1,
-          "name": "宏愿"
-        },
-        {
-          "type": 1,
-          "name": "扶摇"
-        },
-        {
-          "type": 3,
-          "name": "典范"
-        },
-        {
-          "type": 5,
-          "name": "骁勇"
-        },
-        {
-          "type": 2,
-          "name": "遗忘"
+          "type": 6,
+          "name": "同类相食"
         },
         {
           "type": 6,
           "name": "楔子"
+        },
+        {
+          "type": 2,
+          "name": "骑士精神"
+        },
+        {
+          "type": 1,
+          "name": "热熔切割器"
+        },
+        {
+          "type": 3,
+          "name": "破碎君王"
+        },
+        {
+          "type": 5,
+          "name": "J.E.T."
         }
       ],
       "all": [
         {
-          "id": "wpn_sword_0016",
-          "name": "不知归",
+          "id": "wpn_pistol_0011",
+          "name": "落草",
           "rarity": 6,
-          "type": 1
+          "type": 6
         },
         {
-          "id": "wpn_sword_0021",
-          "name": "宏愿",
+          "id": "wpn_pistol_0009",
+          "name": "同类相食",
           "rarity": 6,
-          "type": 1
-        },
-        {
-          "id": "wpn_sword_0011",
-          "name": "扶摇",
-          "rarity": 6,
-          "type": 1
-        },
-        {
-          "id": "wpn_claym_0004",
-          "name": "典范",
-          "rarity": 6,
-          "type": 3
-        },
-        {
-          "id": "wpn_lance_0010",
-          "name": "骁勇",
-          "rarity": 6,
-          "type": 5
-        },
-        {
-          "id": "wpn_funnel_0009",
-          "name": "遗忘",
-          "rarity": 6,
-          "type": 2
+          "type": 6
         },
         {
           "id": "wpn_pistol_0008",
           "name": "楔子",
           "rarity": 6,
           "type": 6
+        },
+        {
+          "id": "wpn_funnel_0010",
+          "name": "骑士精神",
+          "rarity": 6,
+          "type": 2
+        },
+        {
+          "id": "wpn_sword_0012",
+          "name": "热熔切割器",
+          "rarity": 6,
+          "type": 1
+        },
+        {
+          "id": "wpn_claym_0008",
+          "name": "破碎君王",
+          "rarity": 6,
+          "type": 3
+        },
+        {
+          "id": "wpn_lance_0011",
+          "name": "J.E.T.",
+          "rarity": 6,
+          "type": 5
         },
         {
           "id": "wpn_lance_0004",
