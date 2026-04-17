@@ -63,7 +63,7 @@ def collect_pool_ids() -> list[str]:
     with open(char_table_path, encoding="utf-8") as f:
         char_table: dict = json.load(f)
     for pool_id, pool_data in char_table.items():
-        if pool_data.get("type") == "Special":
+        if pool_data.get("type") == "Special" or pool_data.get("type") == 0 or pool_data.get("type") == "0":
             pool_ids.append(pool_id)
 
     # 武器池：全部
