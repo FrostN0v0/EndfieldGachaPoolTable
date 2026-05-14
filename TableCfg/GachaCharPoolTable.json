@@ -6,20 +6,20 @@
       "reward_case_wpn_selfselect_gacha_beginner"
     ],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "beginner",
     "intervalAutoRewardIds": [],
     "mailBannerImage": "",
     "name": {
-      "cn": "启程寻访",
-      "en": "New Horizons"
+      "id": -5316297970819700357,
+      "text": null
     },
     "nameImage": "",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "1",
+    "sortId": 1,
     "tabGradientColor": "fff719",
     "tabImage": "gachapool_type_start",
     "testimonialRewardItemId": "",
@@ -27,21 +27,60 @@
     "ticketGachaSingleLt": "",
     "ticketGachaTenLt": "",
     "trialActivityJumpId": "",
-    "type": "1",
+    "type": "Beginner",
     "uiPrefab": "GachaPoolNodeStarter",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": []
+  },
+  "joint_1_2_2": {
+    "bonusRewardIdEveryPull": "reward_ticketgacha_every_pull_1_2_2",
+    "color": "",
+    "cumulativeRewardIds": [],
+    "desc": {
+      "id": 0,
+      "text": null
+    },
+    "id": "joint_1_2_2",
+    "intervalAutoRewardIds": [
+      "reward_case_token_selfselect_gahca_1_2_2"
+    ],
+    "mailBannerImage": "gachapool_mail_banner_1_2_2",
+    "name": {
+      "id": -3237353914842323977,
+      "text": null
+    },
+    "nameImage": "gachapool_titleicon_1_2_2",
+    "onceRewardId": "reward_ticketgacha_standard_1_2_2",
+    "onceRewardId2": "reward_case_char_selfselect_gahca_1_2_2",
+    "sortId": 2,
+    "tabGradientColor": "ff4a20",
+    "tabImage": "gachapool_type_1_2_2",
+    "testimonialRewardItemId": "",
+    "textColor": "",
+    "ticketGachaSingleLt": "item_ticketgacha_joint_single_lt_1_2_2",
+    "ticketGachaTenLt": "",
+    "trialActivityJumpId": "",
+    "type": "Joint",
+    "uiPrefab": "GachaPoolNodeJoint_1_2_2",
+    "upCharDesc": {
+      "id": 0,
+      "text": null
+    },
+    "upCharIds": [
+      "chr_0016_laevat",
+      "chr_0013_aglina"
+    ]
   },
   "special_1_0_1": {
     "bonusRewardIdEveryPull": "",
     "color": "ec0338",
     "cumulativeRewardIds": [],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "special_1_0_1",
     "intervalAutoRewardIds": [
@@ -49,13 +88,13 @@
     ],
     "mailBannerImage": "gachapool_mail_banner_v1d0_01",
     "name": {
-      "cn": "熔火灼痕",
-      "en": "Scars of the Forge"
+      "id": 2863169750850164319,
+      "text": null
     },
     "nameImage": "gachapool_titleicon_laevat",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "2",
+    "sortId": 2,
     "tabGradientColor": "ec0338",
     "tabImage": "gachapool_type_laevat",
     "testimonialRewardItemId": "item_gacha_introletter_1_0_1",
@@ -63,11 +102,11 @@
     "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_0_1",
     "ticketGachaTenLt": "item_ticketgacha_special_ten_lt_1_0_1",
     "trialActivityJumpId": "jump_center_activity_char_trial_1",
-    "type": "0",
+    "type": "Special",
     "uiPrefab": "GachaPoolNodeLimitedBase",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": [
       "chr_0016_laevat"
@@ -78,8 +117,8 @@
     "color": "FF319F",
     "cumulativeRewardIds": [],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "special_1_0_2",
     "intervalAutoRewardIds": [
@@ -87,13 +126,13 @@
     ],
     "mailBannerImage": "gachapool_mail_banner_v1d0_02",
     "name": {
-      "cn": "热烈色彩",
-      "en": "Hues of Passion"
+      "id": 911187486940174834,
+      "text": null
     },
     "nameImage": "gachapool_titleicon_yvonne",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "2",
+    "sortId": 2,
     "tabGradientColor": "FF319F",
     "tabImage": "gachapool_type_yvonne",
     "testimonialRewardItemId": "item_gacha_introletter_1_0_2",
@@ -101,11 +140,11 @@
     "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_0_2",
     "ticketGachaTenLt": "item_ticketgacha_special_ten_lt_1_0_2",
     "trialActivityJumpId": "jump_center_activity_char_trial_2",
-    "type": "0",
+    "type": "Special",
     "uiPrefab": "GachaPoolNodeLimited_chr_0017_yvonne",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": [
       "chr_0017_yvonne"
@@ -116,8 +155,8 @@
     "color": "f83500",
     "cumulativeRewardIds": [],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "special_1_0_3",
     "intervalAutoRewardIds": [
@@ -125,13 +164,13 @@
     ],
     "mailBannerImage": "gachapool_mail_banner_v1d0_03",
     "name": {
-      "cn": "轻飘飘的信使",
-      "en": "The Floaty Messenger"
+      "id": -8672529140770783809,
+      "text": null
     },
     "nameImage": "gachapool_titleicon_aglina",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "2",
+    "sortId": 2,
     "tabGradientColor": "f83500",
     "tabImage": "gachapool_type_aglina",
     "testimonialRewardItemId": "item_gacha_introletter_1_0_3",
@@ -139,11 +178,11 @@
     "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_0_3",
     "ticketGachaTenLt": "item_ticketgacha_special_ten_lt_1_0_3",
     "trialActivityJumpId": "jump_center_activity_char_trial_3",
-    "type": "0",
+    "type": "Special",
     "uiPrefab": "GachaPoolNodeLimited_chr_0013_aglina",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": [
       "chr_0013_aglina"
@@ -154,8 +193,8 @@
     "color": "f83500",
     "cumulativeRewardIds": [],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "special_1_1_1",
     "intervalAutoRewardIds": [
@@ -163,13 +202,13 @@
     ],
     "mailBannerImage": "gachapool_mail_banner_1_1_1",
     "name": {
-      "cn": "河流的女儿",
-      "en": "River's Daughter"
+      "id": 1319410643089430940,
+      "text": null
     },
     "nameImage": "gachapool_titleicon_1_1_1",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "2",
+    "sortId": 2,
     "tabGradientColor": "047ff2",
     "tabImage": "gachapool_type_1_1_1",
     "testimonialRewardItemId": "item_gacha_introletter_1_1_1",
@@ -177,11 +216,11 @@
     "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_1_1",
     "ticketGachaTenLt": "item_ticketgacha_special_ten_lt_1_1_1",
     "trialActivityJumpId": "jump_center_activity_char_trial_1_1_1",
-    "type": "0",
+    "type": "Special",
     "uiPrefab": "GachaPoolNodeLimited_1_1_1",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": [
       "chr_0027_tangtang"
@@ -192,8 +231,8 @@
     "color": "c70b2a",
     "cumulativeRewardIds": [],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "special_1_1_2",
     "intervalAutoRewardIds": [
@@ -201,13 +240,13 @@
     ],
     "mailBannerImage": "gachapool_mail_banner_1_1_2",
     "name": {
-      "cn": "狼珀",
-      "en": "Wolf Pearl"
+      "id": -437167021687436617,
+      "text": null
     },
     "nameImage": "gachapool_titleicon_1_1_2",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "2",
+    "sortId": 2,
     "tabGradientColor": "ea0c1c",
     "tabImage": "gachapool_type_1_1_2",
     "testimonialRewardItemId": "item_gacha_introletter_1_1_2",
@@ -215,52 +254,14 @@
     "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_1_2",
     "ticketGachaTenLt": "item_ticketgacha_special_ten_lt_1_1_2",
     "trialActivityJumpId": "jump_center_activity_char_trial_1_1_2",
-    "type": "0",
+    "type": "Special",
     "uiPrefab": "GachaPoolNodeLimited_1_1_2",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": [
       "chr_0028_wulfa"
-    ]
-  },
-  "special_1_2_1": {
-    "bonusRewardIdEveryPull": "",
-    "color": "7bb512",
-    "cumulativeRewardIds": [],
-    "desc": {
-      "cn": "",
-      "en": ""
-    },
-    "id": "special_1_2_1",
-    "intervalAutoRewardIds": [
-      "reward_charpotentialup_chr_0030_zhuangfy"
-    ],
-    "mailBannerImage": "gachapool_mail_banner_1_2_1",
-    "name": {
-      "cn": "春雷动，万物生",
-      "en": "Thunder of Renewal"
-    },
-    "nameImage": "gachapool_titleicon_1_2_1",
-    "onceRewardId": "",
-    "onceRewardId2": "",
-    "sortId": "2",
-    "tabGradientColor": "7bb512",
-    "tabImage": "gachapool_type_1_2_1",
-    "testimonialRewardItemId": "item_gacha_introletter_1_2_1",
-    "textColor": "FFFFFF",
-    "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_2_1",
-    "ticketGachaTenLt": "",
-    "trialActivityJumpId": "jump_center_activity_char_trial_1_2_1",
-    "type": "0",
-    "uiPrefab": "GachaPoolNodeLimited_1_2_1",
-    "upCharDesc": {
-      "cn": "",
-      "en": ""
-    },
-    "upCharIds": [
-      "chr_0030_zhuangfy"
     ]
   },
   "standard": {
@@ -268,20 +269,20 @@
     "color": "eeeeee",
     "cumulativeRewardIds": [],
     "desc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "id": "standard",
     "intervalAutoRewardIds": [],
     "mailBannerImage": "",
     "name": {
-      "cn": "基础寻访",
-      "en": "Basic Headhunting"
+      "id": 5913731143154264334,
+      "text": null
     },
     "nameImage": "gachapool_title",
     "onceRewardId": "",
     "onceRewardId2": "",
-    "sortId": "3",
+    "sortId": 3,
     "tabGradientColor": "fff719",
     "tabImage": "gachapool_type_newbie",
     "testimonialRewardItemId": "",
@@ -289,12 +290,50 @@
     "ticketGachaSingleLt": "",
     "ticketGachaTenLt": "",
     "trialActivityJumpId": "",
-    "type": "2",
+    "type": "Standard",
     "uiPrefab": "GachaPoolNodeStandard",
     "upCharDesc": {
-      "cn": "",
-      "en": ""
+      "id": 0,
+      "text": null
     },
     "upCharIds": []
+  },
+  "special_1_2_1": {
+    "bonusRewardIdEveryPull": "",
+    "color": "7bb512",
+    "cumulativeRewardIds": [],
+    "desc": {
+      "id": 0,
+      "text": null
+    },
+    "id": "special_1_2_1",
+    "intervalAutoRewardIds": [
+      "reward_charpotentialup_chr_0030_zhuangfy"
+    ],
+    "mailBannerImage": "gachapool_mail_banner_1_2_1",
+    "name": {
+      "id": 5076401667315512474,
+      "text": null
+    },
+    "nameImage": "gachapool_titleicon_1_2_1",
+    "onceRewardId": "",
+    "onceRewardId2": "",
+    "sortId": 2,
+    "tabGradientColor": "7bb512",
+    "tabImage": "gachapool_type_1_2_1",
+    "testimonialRewardItemId": "item_gacha_introletter_1_2_1",
+    "textColor": "FFFFFF",
+    "ticketGachaSingleLt": "item_ticketgacha_special_single_lt_1_2_1",
+    "ticketGachaTenLt": "",
+    "trialActivityJumpId": "jump_center_activity_char_trial_1_2_1",
+    "type": "Special",
+    "uiPrefab": "GachaPoolNodeLimited_1_2_1",
+    "upCharDesc": {
+      "id": 0,
+      "text": null
+    },
+    "upCharIds": [
+      "chr_0030_zhuangfy"
+    ]
   }
 }
