@@ -1,0 +1,122 @@
+{
+  "code": 0,
+  "data": {
+    "pool": {
+      "pool_gacha_type": "char",
+      "pool_name": "辉光庆典",
+      "pool_type": "extra",
+      "up6_name": "莱万汀",
+      "up6_image": "",
+      "up5_name": "",
+      "up5_image": "",
+      "up6_item_name": "莱万汀的信物",
+      "rotate_image": "",
+      "ticket_name": "流光庆时寻访凭证",
+      "ticket_ten_name": "",
+      "all": [
+        {
+          "id": "chr_0016_laevat",
+          "name": "莱万汀",
+          "rarity": 6
+        },
+        {
+          "id": "chr_0013_aglina",
+          "name": "洁尔佩塔",
+          "rarity": 6
+        },
+        {
+          "id": "chr_0025_ardelia",
+          "name": "艾尔黛拉",
+          "rarity": 6
+        },
+        {
+          "id": "chr_0029_pograni",
+          "name": "骏卫",
+          "rarity": 6
+        },
+        {
+          "id": "chr_0004_pelica",
+          "name": "佩丽卡",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0007_ikut",
+          "name": "弧光",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0012_avywen",
+          "name": "艾维文娜",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0018_dapan",
+          "name": "大潘",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0005_chen",
+          "name": "陈千语",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0006_wolfgd",
+          "name": "狼卫",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0011_seraph",
+          "name": "赛希",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0014_aurora",
+          "name": "昼雪",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0024_deepfin",
+          "name": "阿列什",
+          "rarity": 5
+        },
+        {
+          "id": "chr_0019_karin",
+          "name": "秋栗",
+          "rarity": 4
+        },
+        {
+          "id": "chr_0020_meurs",
+          "name": "卡契尔",
+          "rarity": 4
+        },
+        {
+          "id": "chr_0021_whiten",
+          "name": "埃特拉",
+          "rarity": 4
+        },
+        {
+          "id": "chr_0022_bounda",
+          "name": "萤石",
+          "rarity": 4
+        },
+        {
+          "id": "chr_0023_antal",
+          "name": "安塔尔",
+          "rarity": 4
+        }
+      ],
+      "rotate_list": [],
+      "once_reward_name": "流光庆时调用凭证",
+      "rotate_reward_name": "流光庆时信物补给",
+      "rotate_reward_item_list": [
+        "莱万汀的信物",
+        "洁尔佩塔的信物",
+        "艾尔黛拉的信物",
+        "骏卫的信物"
+      ],
+      "hard_guarantee_char_list": []
+    },
+    "timezone": 8
+  },
+  "msg": ""
+}
