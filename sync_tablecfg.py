@@ -1,4 +1,5 @@
 import json
+import tempfile
 from pathlib import Path
 
 import httpx
@@ -88,6 +89,61 @@ def display_path(path: Path) -> Path:
         return path
 
 
+def _remove_if_exists(path: Path) -> None:
+    try:
+        path.unlink(missing_ok=True)
+    except OSError as exc:
+        logger.warning("failed to remove {}: {}", display_path(path), exc)
+
+
+def apply_pending_writes(pending_writes: list[tuple[Path, bytes]]) -> None:
+    staged_writes: list[tuple[Path, Path, Path]] = []
+    applied_writes: list[tuple[Path, Path, bool]] = []
+
+    try:
+        for target_path, content in pending_writes:
+            target_path.parent.mkdir(parents=True, exist_ok=True)
+            with tempfile.NamedTemporaryFile(
+                delete=False,
+                dir=target_path.parent,
+                prefix=f".{target_path.name}.",
+                suffix=".tmp",
+            ) as tmp_file:
+                tmp_file.write(content)
+                tmp_path = Path(tmp_file.name)
+            with tempfile.NamedTemporaryFile(
+                delete=False,
+                dir=target_path.parent,
+                prefix=f".{target_path.name}.",
+                suffix=".bak",
+            ) as backup_file:
+                backup_path = Path(backup_file.name)
+            _remove_if_exists(backup_path)
+            staged_writes.append((target_path, tmp_path, backup_path))
+
+        for target_path, tmp_path, backup_path in staged_writes:
+            had_original = target_path.exists()
+            if had_original:
+                target_path.replace(backup_path)
+            applied_writes.append((target_path, backup_path, had_original))
+            tmp_path.replace(target_path)
+            logger.info("updated {}", display_path(target_path))
+    except Exception:
+        for target_path, backup_path, had_original in reversed(applied_writes):
+            try:
+                if had_original and backup_path.exists():
+                    backup_path.replace(target_path)
+                elif not had_original:
+                    _remove_if_exists(target_path)
+            except OSError as exc:
+                logger.warning("failed to restore {}: {}", display_path(target_path), exc)
+        raise
+    finally:
+        for target_path, tmp_path, backup_path in staged_writes:
+            _remove_if_exists(tmp_path)
+            _remove_if_exists(backup_path)
+
+
 def sync_with_client(client) -> bool:
     state = load_state()
     new_state = dict(state)
@@ -109,12 +165,7 @@ def sync_with_client(client) -> bool:
 
         pending_writes.append((target_path, content))
 
-    for target_path, content in pending_writes:
-        target_path.parent.mkdir(parents=True, exist_ok=True)
-        tmp_path = target_path.with_name(f"{target_path.name}.tmp")
-        tmp_path.write_bytes(content)
-        tmp_path.replace(target_path)
-        logger.info("updated {}", display_path(target_path))
+    apply_pending_writes(pending_writes)
 
     if new_state != state or not STATE_PATH.exists():
         save_state(new_state)

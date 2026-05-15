@@ -2,6 +2,7 @@ import json
 import unittest
 import tempfile
 from pathlib import Path
+from unittest import mock
 
 import sync_tablecfg
 
@@ -156,6 +157,51 @@ class SyncTableCfgTests(unittest.TestCase):
                 (sync_tablecfg.TABLE_DIR / filename).read_text(encoding="utf-8"),
             )
         self.assertFalse(sync_tablecfg.STATE_PATH.exists())
+
+    def test_apply_failure_on_second_write_restores_all_files_and_state(self):
+        first_file, second_file = sync_tablecfg.TABLE_FILES
+        original_contents = {
+            filename: f'{{"old":"{filename}"}}'
+            for filename in sync_tablecfg.TABLE_FILES
+        }
+        for filename, content in original_contents.items():
+            (sync_tablecfg.TABLE_DIR / filename).write_text(content, encoding="utf-8")
+        original_state = {
+            filename: {
+                "last_modified": "old-last-modified",
+                "etag": f'"old-etag-{filename}"',
+                "content_length": "1",
+            }
+            for filename in sync_tablecfg.TABLE_FILES
+        }
+        sync_tablecfg.STATE_PATH.write_text(json.dumps(original_state, indent=2), encoding="utf-8")
+        original_state_text = sync_tablecfg.STATE_PATH.read_text(encoding="utf-8")
+
+        get_responses = {
+            self.url_for(first_file): FakeResponse(content=b'{"new":"first"}'),
+            self.url_for(second_file): FakeResponse(content=b'{"new":"second"}'),
+        }
+        client = FakeClient(self.fake_head_responses(), get_responses)
+        original_replace = Path.replace
+        injected_error = OSError("injected replace failure")
+
+        def failing_replace(path, target):
+            if (
+                path.parent == sync_tablecfg.TABLE_DIR
+                and path.name.startswith(f".{second_file}.")
+                and path.name.endswith(".tmp")
+            ):
+                raise injected_error
+            return original_replace(path, target)
+
+        with mock.patch.object(Path, "replace", autospec=True, side_effect=failing_replace):
+            with self.assertRaises(OSError) as caught:
+                sync_tablecfg.sync_tablecfg(client)
+
+        self.assertIs(caught.exception, injected_error)
+        for filename, content in original_contents.items():
+            self.assertEqual(content, (sync_tablecfg.TABLE_DIR / filename).read_text(encoding="utf-8"))
+        self.assertEqual(original_state_text, sync_tablecfg.STATE_PATH.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
