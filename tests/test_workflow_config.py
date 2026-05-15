@@ -28,6 +28,12 @@ class SyncWorkflowConfigTests(unittest.TestCase):
         self.assertIn("gh workflow run update-gacha.yml", text)
         self.assertIn("GH_TOKEN: ${{ github.token }}", text)
 
+    def test_sync_workflow_uses_status_to_detect_untracked_changes(self):
+        text = self.workflow_path.read_text(encoding="utf-8")
+        self.assertIn("git status --porcelain -- TableCfg", text)
+        self.assertIn("git status --porcelain -- TableCfg .github/tablecfg-sync-state.json", text)
+        self.assertNotIn("git diff --quiet -- TableCfg", text)
+
 
 if __name__ == "__main__":
     unittest.main()

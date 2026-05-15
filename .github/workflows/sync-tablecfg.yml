@@ -27,16 +27,16 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          if git diff --quiet -- TableCfg; then
-            echo "tablecfg_changed=false" >> "$GITHUB_OUTPUT"
-          else
+          if [ -n "$(git status --porcelain -- TableCfg)" ]; then
             echo "tablecfg_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tablecfg_changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-          if git diff --quiet -- TableCfg .github/tablecfg-sync-state.json; then
-            echo "any_changed=false" >> "$GITHUB_OUTPUT"
-          else
+          if [ -n "$(git status --porcelain -- TableCfg .github/tablecfg-sync-state.json)" ]; then
             echo "any_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "any_changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Commit and push TableCfg changes
