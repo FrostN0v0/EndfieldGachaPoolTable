@@ -11,6 +11,7 @@ RAW_DIR = BASE_DIR / "raw"
 BANNER_DIR = BASE_DIR / "banner"
 ROTATE_DIR = BASE_DIR / "rotate"
 MAX_CONCURRENCY = 5
+CHAR_POOL_TYPES = {"Special", "Joint", 0, "0"}
 
 
 async def get_ef_gacha_content(
@@ -53,17 +54,17 @@ async def get_ef_gacha_content(
 def collect_pool_ids() -> list[str]:
     """从 TableCfg 中收集需要请求的 pool_id 列表。
 
-    - GachaCharPoolTable: 仅收集 type == 0 的条目
+    - GachaCharPoolTable: 收集 type 在 CHAR_POOL_TYPES 中的条目
     - GachaWeaponPoolTable: 收集全部条目
     """
     pool_ids: list[str] = []
 
-    # 角色池：仅 type == 0
+    # 角色池：Special / Joint / 0 / "0"
     char_table_path = TABLE_DIR / "GachaCharPoolTable.json"
     with open(char_table_path, encoding="utf-8") as f:
         char_table: dict = json.load(f)
     for pool_id, pool_data in char_table.items():
-        if pool_data.get("type") == "Special" or pool_data.get("type") == 0 or pool_data.get("type") == "0":
+        if pool_data.get("type") in CHAR_POOL_TYPES:
             pool_ids.append(pool_id)
 
     # 武器池：全部
