@@ -1,12 +1,12 @@
 {
   "GachaCharPoolTable.json": {
-    "content_length": "11580",
-    "etag": "\"6a3e085b-2d3c\"",
-    "last_modified": "Fri, 26 Jun 2026 05:04:27 GMT"
+    "content_length": "12712",
+    "etag": "\"6a584faa-31a8\"",
+    "last_modified": "Thu, 16 Jul 2026 03:27:38 GMT"
   },
   "GachaWeaponPoolTable.json": {
-    "content_length": "13761",
-    "etag": "\"6a3e085b-35c1\"",
-    "last_modified": "Fri, 26 Jun 2026 05:04:27 GMT"
+    "content_length": "14711",
+    "etag": "\"6a584faa-3977\"",
+    "last_modified": "Thu, 16 Jul 2026 03:27:38 GMT"
   }
 }
