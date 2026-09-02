@@ -4,9 +4,12 @@
     "pool": {
       "pool_gacha_type": "weapon",
       "pool_name": "明曜申领",
+      "version_num": "0",
+      "pool_type": "normal",
       "link_char_pool_name": "晨星于此闪耀",
       "up6_name": "曜夜的首演",
       "up6_image": "https://web.hycdn.cn/upload/image/20260807/db2663c5e8f8730d35b9eb14ab6210fb.png",
+      "up6_banner": "https://web.hycdn.cn/upload/image/20260807/db2663c5e8f8730d35b9eb14ab6210fb.png",
       "gift_weapon_name": "曜夜的首演",
       "gift_weapon_box_name": "补充武库箱·明曜",
       "gift_weapon_reward_name": "明曜赠礼",

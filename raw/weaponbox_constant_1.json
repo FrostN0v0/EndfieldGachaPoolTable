@@ -4,9 +4,12 @@
     "pool": {
       "pool_gacha_type": "weapon",
       "pool_name": "坚冰申领",
+      "version_num": "",
+      "pool_type": "normal",
       "link_char_pool_name": "",
       "up6_name": "赫拉芬格",
       "up6_image": "https://web.hycdn.cn/upload/image/20260109/74d3edde0bae5ef518521cb0b21db17a.png",
+      "up6_banner": "https://web.hycdn.cn/upload/image/20260109/74d3edde0bae5ef518521cb0b21db17a.png",
       "gift_weapon_name": "赫拉芬格",
       "gift_weapon_box_name": "补充武库箱·坚冰",
       "gift_weapon_reward_name": "坚冰赠礼",

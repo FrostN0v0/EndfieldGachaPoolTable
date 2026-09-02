@@ -4,9 +4,12 @@
     "pool": {
       "pool_gacha_type": "weapon",
       "pool_name": "远途申领",
+      "version_num": "",
+      "pool_type": "normal",
       "link_char_pool_name": "",
       "up6_name": "不知归",
       "up6_image": "https://web.hycdn.cn/upload/image/20260109/a6c9860df8009e7e5f93daca39b3edaf.png",
+      "up6_banner": "https://web.hycdn.cn/upload/image/20260109/a6c9860df8009e7e5f93daca39b3edaf.png",
       "gift_weapon_name": "不知归",
       "gift_weapon_box_name": "补充武库箱·远途",
       "gift_weapon_reward_name": "远途赠礼",

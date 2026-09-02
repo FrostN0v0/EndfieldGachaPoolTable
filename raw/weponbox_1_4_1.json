@@ -4,9 +4,12 @@
     "pool": {
       "pool_gacha_type": "weapon",
       "pool_name": "军列申领",
+      "version_num": "0",
+      "pool_type": "normal",
       "link_char_pool_name": "临渊望北",
       "up6_name": "四二式·肃阵",
       "up6_image": "https://web.hycdn.cn/upload/image/20260715/31ef641b1f64da95323da869a9d3239f.png",
+      "up6_banner": "https://web.hycdn.cn/upload/image/20260715/31ef641b1f64da95323da869a9d3239f.png",
       "gift_weapon_name": "四二式·肃阵",
       "gift_weapon_box_name": "补充武库箱·军列",
       "gift_weapon_reward_name": "军列赠礼",
