@@ -11,7 +11,7 @@ RAW_DIR = BASE_DIR / "raw"
 BANNER_DIR = BASE_DIR / "banner"
 ROTATE_DIR = BASE_DIR / "rotate"
 MAX_CONCURRENCY = 5
-CHAR_POOL_TYPES = {"Special", "Joint", 0, "0"}
+CHAR_POOL_TYPES = {"0", "3", "4"}
 
 
 async def get_ef_gacha_content(
@@ -59,7 +59,7 @@ def collect_pool_ids() -> list[str]:
     """
     pool_ids: list[str] = []
 
-    # 角色池：Special / Joint / 0 / "0"
+    # 角色池：限定（0）、联合（3）、复刻（4）
     char_table_path = TABLE_DIR / "GachaCharPoolTable.json"
     with open(char_table_path, encoding="utf-8") as f:
         char_table: dict = json.load(f)

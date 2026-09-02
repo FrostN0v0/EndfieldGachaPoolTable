@@ -8,7 +8,7 @@ from loguru import logger
 BASE_DIR = Path(__file__).parent
 TABLE_DIR = BASE_DIR / "TableCfg"
 STATE_PATH = BASE_DIR / ".github" / "tablecfg-sync-state.json"
-REMOTE_BASE_URL = "https://lulush.microgg.cn/BeyondUID/TableCfg"
+REMOTE_BASE_URL = "https://raw.githubusercontent.com/555me/beyondGameData/main/tableCfg"
 TABLE_FILES = ("GachaCharPoolTable.json", "GachaWeaponPoolTable.json")
 METADATA_KEYS = ("last_modified", "etag", "content_length")
 TIMEOUT = 30.0

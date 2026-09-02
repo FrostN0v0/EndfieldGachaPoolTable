@@ -15,9 +15,11 @@ class CollectPoolIdsTests(unittest.TestCase):
         main.TABLE_DIR.mkdir(parents=True)
 
         char_table = {
-            "special_pool": {"type": "Special"},
-            "joint_pool": {"type": "Joint"},
-            "normal_pool": {"type": "Normal"},
+            "special_pool": {"type": "0"},
+            "joint_pool": {"type": "3"},
+            "rerun_pool": {"type": "4"},
+            "beginner_pool": {"type": "1"},
+            "standard_pool": {"type": "2"},
         }
         weapon_table = {
             "weapon_pool": {"type": "weapon"},
@@ -36,11 +38,8 @@ class CollectPoolIdsTests(unittest.TestCase):
         main.TABLE_DIR = self.original_table_dir
         self.tmp.cleanup()
 
-    def test_collect_pool_ids_includes_joint_character_pools(self):
-        self.assertEqual(
-            main.collect_pool_ids(),
-            ["special_pool", "joint_pool", "weapon_pool"],
-        )
+    def test_collect_pool_ids_includes_supported_character_pool_types(self):
+        assert main.collect_pool_ids() == ["special_pool", "joint_pool", "rerun_pool", "weapon_pool"]
 
 
 if __name__ == "__main__":
