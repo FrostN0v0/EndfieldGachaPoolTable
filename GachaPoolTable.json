@@ -6220,11 +6220,15 @@
     "link_char_pool_name": "冬猎",
     "up6_name": "寒夜幽影",
     "up6_image": "https://web.hycdn.cn/upload/image/20260901/7b9fbfa75e080683418b68fe6aca7293.png",
-    "up6_banner": "https://web.hycdn.cn/upload/image/20260901/7b9fbfa75e080683418b68fe6aca7293.png",
+    "up6_banner": "https://web.hycdn.cn/upload/image/20260901/152dcb260d3f485b4fa8364f560793c8.png",
     "gift_weapon_name": "寒夜幽影",
     "gift_weapon_box_name": "补充武库箱·幽寒",
     "gift_weapon_reward_name": "幽寒赠礼",
     "gift_content": [
+      {
+        "type": 3,
+        "name": "典范"
+      },
       {
         "type": 3,
         "name": "破碎君王"
