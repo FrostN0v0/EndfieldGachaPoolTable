@@ -11,7 +11,7 @@ RAW_DIR = BASE_DIR / "raw"
 BANNER_DIR = BASE_DIR / "banner"
 ROTATE_DIR = BASE_DIR / "rotate"
 MAX_CONCURRENCY = 5
-CHAR_POOL_TYPES = {"0", "3", "4"}
+CHAR_POOL_TYPES = {"0", "3", "4", "special", "joint", "rerun"}
 
 
 async def get_ef_gacha_content(
@@ -24,7 +24,7 @@ async def get_ef_gacha_content(
 
     Args:
         client: httpx 异步客户端。
-        pool_id: 卡池ID（如 special_xxx）。
+        pool_id: 卡池ID（如 special_xxx、joint_xxx、rerun_chr_xxx、rerun_wpn_xxx）。
         semaphore: 并发限制信号量。
         server_id: 服务器ID，默认为 "1"。
     """
@@ -40,7 +40,10 @@ async def get_ef_gacha_content(
         resp_json = response.json()
         code = resp_json.get("code")
         if code != 0:
-            logger.warning("[{}] 请求失败，状态码：{}，消息：{}", pool_id, code, resp_json.get("message"))
+            logger.warning("[{}] 请求失败，状态码：{}，消息：{}", pool_id, code, resp_json.get("msg"))
+            return
+        if not resp_json.get("data", {}).get("pool"):
+            logger.warning("[{}] 响应缺少卡池内容，保留已有归档", pool_id)
             return
         # 保存到 raw 文件夹
         RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -54,7 +57,7 @@ async def get_ef_gacha_content(
 def collect_pool_ids() -> list[str]:
     """从 TableCfg 中收集需要请求的 pool_id 列表。
 
-    - GachaCharPoolTable: 收集 type 在 CHAR_POOL_TYPES 中的条目
+    - GachaCharPoolTable: 收集限定、联合、复刻池，兼容数字和枚举名称
     - GachaWeaponPoolTable: 收集全部条目
     """
     pool_ids: list[str] = []
@@ -64,7 +67,7 @@ def collect_pool_ids() -> list[str]:
     with open(char_table_path, encoding="utf-8") as f:
         char_table: dict = json.load(f)
     for pool_id, pool_data in char_table.items():
-        if pool_data.get("type") in CHAR_POOL_TYPES:
+        if str(pool_data.get("type", "")).lower() in CHAR_POOL_TYPES:
             pool_ids.append(pool_id)
 
     # 武器池：全部
